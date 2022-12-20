@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<header><h2>Add a New Habitat</h2></header>
+<hr>
+<form action="/creatures" method="post">
+  <div>
+    <label for="name"><Title></Title>Name of Habitat:</label>
+    <input type="text" id="name" name="name" placeholder="Name" required autofocus>
+  </div>
+  <button type="submit">Add New Habitat</button>
+
+</form>
+
+{% endblock %}
+  

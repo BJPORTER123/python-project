@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<header><h2>Add a New Creature</h2></header>
+<hr>
+<form action="/creatures" method="post">
+  <div>
+    <label for="name"><Title></Title>Name of Creature:</label>
+    <input type="text" id="name" name="name" placeholder="Name" required autofocus>
+  </div>
+    <label for="habitat">Habitat:</label>
+        <select id="habitat" name="habitat_id" aria-placeholder="Habitat">
+            {% for habitat in habitats %}
+            <option value="{{habitat.id}}">{{ habitat.name }}</option>
+            {% endfor %}
+        </select>
+  <div>
+    <label for="description">Description:</label>
+    <input type="text" id="description" name="description" placeholder="Description" required>
+  </div>
+  <div>
+    <label for="quantity">Quantity:</label>
+    <input type="number" name="quantity" id="quantity" placeholder="Quantity" required>
+  </div>
+  <div>
+    <label for="buying_cost">Buying cost:</label>
+    <input type="number" name="buying_cost" step="0.01" id="buying_cost" placeholder="Buying cost" required>
+  </div>
+  <div>
+    <label for="selling_price">Selling price:</label>
+    <input type="number" name="selling_price" step="0.01" id="selling_price" placeholder="Selling price" required>
+  </div>
+  <button type="submit">Add New Creature</button>
+
+</form>
+
+{% endblock %}
+  
+  
+  

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../static/style.css">
+  <title>Shop</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="/creatures">Creatures</a></li>
+        <li><a href="/habitats">Habitats</a></li>
+      </ul>
+    </nav>
+  </header>
+  <hr>
+  <div class="container">
+    {% block content %}
+    {% endblock %}
+  </div>
+
+  {%block home%}
+  {% endblock %}
+  <footer>
+
+  </footer>
+</body>
+</html>

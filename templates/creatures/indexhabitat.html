@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+
+<header><h1>List of Habitats</h1></header>
+<hr>
+<nav>
+    <button><a href="/habitats/new">Add New Habitat</a></button>
+</nav>
+<hr>
+{% for habitat in habitats %}
+    <div class="content1">
+      <div>
+      <p><b>Habitat Type:</b>  {{habitat.name}} <br></p>
+      <form class="delete-form" action="/habitats/{{habitat.id}}" method="POST">
+       <button class="remove_creature">Remove Habitat</button>
+     </form>
+     </div>
+   </div>
+   {% endfor %}
+   
+   {% endblock %}
+     
