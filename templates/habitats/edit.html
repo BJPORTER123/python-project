@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<header><h2>Edit a Habitat</h2></header>
+<hr>
+<form action="/habitats/{{habitat.id}}" method="post">
+  <div>
+    <label for="name"><Title></Title>Name of Habitat:</label>
+    <input type="text" id="name" name="name" value="{{habitat.name}}" required autofocus>
+  </div>
+    
+  <button type="submit">Edit Habitat</button>
+
+</form>
+
+{% endblock %}

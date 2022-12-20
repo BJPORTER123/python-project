@@ -10,7 +10,7 @@
 {% for creature in creatures %}
 <div class="content">
   <div>
-  <h3> {{creature.name}}</h3>
+  <h3><a href="/creatures/{{creature.id}}">{{creature.name}}</a></h3>
   <p><b>Habitat Type:</b>  {{creature.habitat.name}} <br> 
     <b>Description: </b>{{creature.description}} <br> 
     <b>Quantity:</b>{{creature.quantity}} <br>

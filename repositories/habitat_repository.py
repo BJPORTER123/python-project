@@ -42,3 +42,4 @@ def save(habitat):
 def update(habitat):
     sql = "UPDATe habitats SET (name) = (%s) WHERE id = %s"
     values = [habitat.name, habitat.id]
+    run_sql(sql,values)

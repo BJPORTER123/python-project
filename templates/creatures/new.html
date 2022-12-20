@@ -8,7 +8,7 @@
     <input type="text" id="name" name="name" placeholder="Name" required autofocus>
   </div>
     <label for="habitat">Habitat:</label>
-        <select id="habitat" name="habitat_id">
+        <select id="habitat" name="habitat_id" placeholder="Habitat" required>
             {% for habitat in habitats %}
             <option value="{{habitat.id}}">{{ habitat.name }}</option>
             {% endfor %}
