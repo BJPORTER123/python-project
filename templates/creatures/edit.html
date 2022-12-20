@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+<header><h2>Edit a Creature</h2></header>
+<hr>
+<form action="/creatures/{{creature.id}}" method="post">
+  <div>
+    <label for="name"><Title></Title>Name of Creature:</label>
+    <input type="text" id="name" name="name" value="{{creature.name}}" required autofocus>
+  </div>
+    <div>
+    <label for="habitat">Habitat:</label>
+        <select id="habitat" name="habitat_id">
+            {% for habitat in habitats %}
+            <option value="{{habitat.id}}" 
+                {% if creature.habitat.id == habitat.id %} selected="selected" {% endif %}>
+                {{ habitat.name }}
+            </option>
+            {% endfor %}
+        </select>
+    </div>
+  <div>
+    <label for="description">Description:</label>
+    <input type="text" id="description" name="description" value={{creature.description}} required>
+  </div>
+  <div>
+    <label for="quantity">Quantity:</label>
+    <input type="number" name="quantity" id="quantity" value={{creature.quantity}} required>
+  </div>
+  <div>
+    <label for="buying_cost">Buying cost:</label>
+    <input type="number" name="buying_cost" step="0.01" id="buying_cost" value={{creature.buying_cost}} required>
+  </div>
+  <div>
+    <label for="selling_price">Selling price:</label>
+    <input type="number" name="selling_price" step="0.01" id="selling_price" value={{creature.selling_price}} required>
+  </div>
+  <button type="submit">Edit Creature</button>
+
+</form>
+
+{% endblock %}
+  

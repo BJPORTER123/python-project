@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+
+<header><h1>Habitat</h1></header>
+<hr>
+    <div class="content1">
+      <p><b>Habitat Type:</b>  {{habitat.name}} <br></p>
+      <p><a href="/habitats/{{habitat.id}}/edit"></a></p>
+   </div>
+   {% endfor %}
+   
+   {% endblock %}

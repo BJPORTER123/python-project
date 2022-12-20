@@ -1,2 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
 
+<header><h1>Creature</h1></header>
+<hr>
+<div class="content">
+<h3> {{creature.name}}</h3>
+    <p><b>Habitat Type:</b>  {{creature.habitat.name}} <br> 
+    <b>Description: </b>{{creature.description}} <br> 
+    <b>Quantity:</b>{{creature.quantity}} <br>
+    <b>Selling Price:</b>{{creature.selling_price}} <br>
+    <b>Buying Cost:</b>{{creature.buying_cost}} <br>
+    <b>Selling Price:</b> {{creature.selling_price}} <br></p>
+    <p><a href="/creatures/{{creature.id}}/edit">Edit</a></p>
+</div>
+{% endblock %}
 

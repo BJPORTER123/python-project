@@ -8,21 +8,25 @@
 </div>
 <hr>
 {% for creature in creatures %}
-    <div class="content">
-      <div>
-      <h3> {{creature.name}}</h3>
-      <p><b>Habitat Type:</b>  {{creature.habitat.name}} <br> 
-        <b>Description: </b>{{creature.description}} <br> 
-        <b>Quantity:</b>{{creature.quantity}} <br>
-        <b>Selling Price:</b>{{creature.selling_price}} <br>
-        <b>Buying Cost:</b>{{creature.buying_cost}} <br>
-        <b>Selling Price:</b> {{creature.selling_price}} <br></p>
+<div class="content">
+  <div>
+  <h3> {{creature.name}}</h3>
+  <p><b>Habitat Type:</b>  {{creature.habitat.name}} <br> 
+    <b>Description: </b>{{creature.description}} <br> 
+    <b>Quantity:</b>{{creature.quantity}} <br>
+    <b>Selling Price:</b>{{creature.selling_price}} <br>
+    <b>Buying Cost:</b>{{creature.buying_cost}} <br>
+    <b>Selling Price:</b> {{creature.selling_price}} <br></p>
+    <div>
       <form class="delete-form" action="/creatures/{{creature.id}}" method="POST">
-       <button class="remove_creature">Remove Creature</button>
-     </form>
-     </div>
-   </div>
-   {% endfor %}
-   
-   {% endblock %}
+        <button class="remove_creature">Remove Creature</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endfor %}
+
+{% endblock %}
+  
+       
      

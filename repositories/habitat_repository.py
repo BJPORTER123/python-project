@@ -38,3 +38,7 @@ def save(habitat):
     id = results[0]['id']
     habitat.id =id
     return habitat
+
+def update(habitat):
+    sql = "UPDATe habitats SET (name) = (%s) WHERE id = %s"
+    values = [habitat.name, habitat.id]
