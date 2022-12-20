@@ -10,7 +10,7 @@ def select_all():
     results = run_sql(sql)
     for row in results:
         habitat = habitat_repo.select(row['habitat_id'])
-        creature = Creature(row['name'],habitat,row['description'], row['quantity'],row['buying_cost'],row['selling_price'],row['id'])
+        creature = Creature(row['name'],habitat, row['description'], row['quantity'],row['buying_cost'],row['selling_price'],row['id'])
         creatures.append(creature)
     return creatures
 
@@ -18,11 +18,11 @@ def select(id):
     creature = None
     sql = "SELECT * FROM creatures WHERE id = %s"
     values = [id]
-    result = run_sql(sql, values)
-
-    if result != None:
+    results = run_sql(sql, values)
+    if results:
+        result = results[0]
         habitat = habitat_repo.select(result['habitat_id'])
-        creature = Creature(result['name'],habitat,result['description'], result['quantity'],result['buying_cost'],result['selling_price'],result['id'])
+        creature = Creature(result['name'], habitat, result['description'], result['quantity'], result['buying_cost'], result['selling_price'] , result['id'] )
     return creature
 
 def delete_all():

@@ -2,7 +2,7 @@
 {% block content %}
 <header><h2>Edit a Creature</h2></header>
 <hr>
-<form action="/creatures/{{creature.id}}" method="post">
+<form action="/creatures/{{creature.id}}/update" method="post">
   <div>
     <label for="name"><Title></Title>Name of Creature:</label>
     <input type="text" id="name" name="name" value="{{creature.name}}" required autofocus>

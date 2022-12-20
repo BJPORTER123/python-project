@@ -18,7 +18,7 @@
     <b>Buying Cost:</b>{{creature.buying_cost}} <br>
     <b>Selling Price:</b> {{creature.selling_price}} <br></p>
     <div>
-      <form class="delete-form" action="/creatures/{{creature.id}}" method="POST">
+      <form class="delete-form" action="/creatures/{{creature.id}}/delete" method="POST">
         <button class="remove_creature">Remove Creature</button>
       </form>
     </div>

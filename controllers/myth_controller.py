@@ -16,13 +16,13 @@ def creatures():
     return render_template("creatures/index.html", creatures = creatures)
 
 # 2 show individual creature
-@creatures_blueprint.route("/creatures/<id>/show", methods = ['GET'])
+@creatures_blueprint.route("/creatures/<id>", methods = ['GET'])
 def show_creature(id):
     creature = creature_repo.select(id)
     return render_template("/creatures/show.html", creature = creature)
 
 # 3 Delete a creature
-@creatures_blueprint.route("/creatures/<id>", methods = ['POST'])
+@creatures_blueprint.route("/creatures/<id>/delete", methods = ['POST'])
 def destroy(id):
     creature_repo.delete(id)
     return redirect("/creatures")
@@ -54,7 +54,7 @@ def edit_creature(id):
     return render_template("creatures/edit.html",habitats = habitats, creature = creature)
 
 # 7 update a creature
-@creatures_blueprint.route("/creatures/<id>", methods = ['POST'])
+@creatures_blueprint.route("/creatures/<id>/update", methods = ['POST'])
 def update_creature(id):
     name = request.form ['name']
     description = request.form ['description']
@@ -62,7 +62,7 @@ def update_creature(id):
     buying_cost = request.form ['buying_cost']
     selling_price = request.form ['selling_price']
     habitat = habitat_repo.select(request.form['habitat_id'])
-    creature = Creature[name, habitat, description, quantity, buying_cost, selling_price, id]
+    creature = Creature(name, habitat, description, quantity, buying_cost, selling_price, id)
     creature_repo.update(creature)
     return redirect("/creatures")
 
@@ -80,7 +80,7 @@ def show_habitat(id):
     return render_template("/habitats/show.html", habitat = habitat)
 
 # 3 delete a habitat
-@habitats_blueprint.route("/habitat/<id>", methods = ['POST'])
+@habitats_blueprint.route("/habitat/<id>/delete", methods = ['POST'])
 def destroy_habitat(id):
     habitat_repo.delete(id)
     return redirect("/habitats")
@@ -91,10 +91,10 @@ def new_habitat():
     return render_template("/habitats/new.html")
 
 # 5 create a new habitat
-@habitats_blueprint.route("/habitats/new", methods = ['POST'])
+@habitats_blueprint.route("/habitats", methods = ['POST'])
 def create_habitat():
     name = request.form['name']
-    habitat = Habitat[name]
+    habitat = Habitat(name)
     habitat_repo.save(habitat)
     return redirect("/habitats")
 
@@ -105,10 +105,10 @@ def edit_habitat(id):
     return render_template("habitats/edit.html",habitat = habitat)
 
 # 7 update habitat
-@habitats_blueprint.route("/habitats/<id>", methods = ['POST'])
+@habitats_blueprint.route("/habitats/<id>/update", methods = ['POST'])
 def update_habitat(id):
     name = request.form['name']
-    habitat = Habitat[name, id]
+    habitat = Habitat(name, id)
     habitat_repo.update(habitat)
     return redirect("/habitats")
 

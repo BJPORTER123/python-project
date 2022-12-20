@@ -8,3 +8,4 @@ class Creature:
         self.selling_price = selling_price
         self.id = id
 
+
