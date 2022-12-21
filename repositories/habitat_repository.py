@@ -8,7 +8,7 @@ def select_all():
     sql = "SELECT * FROM habitats"
     results = run_sql(sql)
     for row in results:
-        habitat = Habitat(row['name'],row['id'])
+        habitat = Habitat(row['name'],row['image'],row['id'])
         habitats.append(habitat)
     return habitats
 
@@ -19,7 +19,7 @@ def select(id):
     results = run_sql(sql, values)
     if results:
         result = results[0]
-        habitat = Habitat(result['name'], result['id'])
+        habitat = Habitat(result['name'], result['image'], result['id'])
     return habitat
 
 def delete_all():
@@ -32,14 +32,14 @@ def delete(id):
     run_sql(sql, values)
 
 def save(habitat):
-    sql = "INSERT INTO habitats (name) VALUES (%s) RETURNING id"
-    values = [habitat.name]
+    sql = "INSERT INTO habitats (name, image) VALUES (%s, %s) RETURNING id"
+    values = [habitat.name, habitat.image]
     results = run_sql(sql,values)
     id = results[0]['id']
     habitat.id =id
     return habitat
 
 def update(habitat):
-    sql = "UPDATE habitats SET name = (%s) WHERE id = %s"
-    values = [habitat.name, habitat.id]
+    sql = "UPDATE habitats SET (name, image) = (%s, %s) WHERE id = %s"
+    values = [habitat.name, habitat.image, habitat.id]
     run_sql(sql,values)

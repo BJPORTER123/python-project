@@ -5,10 +5,11 @@
 <nav>
   <button class="add-button"><a class="text-button" href="/creatures/new">Add New Creature</a></button>
 </nav>
-{% for creature in creatures %}
+{% for creature in creatures %}  
+
+<h3 class="index-title">{{creature.name}}</a></h3>
 <img src="{{creature.image}}" width="200px" height="200px">
 <div class="content">
-  <h3 class="index-title"><a class="links" href="/creatures/{{creature.id}}">{{creature.name}}</a></h3>
   <p>
     <b class="atrributes"> Habitat Type:</b> {{creature.habitat.name}} <br> 
     <b class="atrributes"> Description:</b> {{creature.description}} <br> 
@@ -16,6 +17,12 @@
     <b class="atrributes"> Selling Price:</b>  £ {{creature.selling_price}} <br>
     <b class="atrributes"> Buying Cost: </b>  £ {{creature.buying_cost}} <br>
   </p> 
+      {% if creature.quantity<15 and creature.quantity>0 %}
+    <b><p> Warning {{creature.name}} is low on stock. </p></b>
+    {% elif creature.quantity == 0 %}
+    <b><p>Warning {{creature.name}} is out of stock, refill the stock.</p></b>
+      {% endif %}
+    <div><a class="links" href="/creatures/{{creature.id}}">Click for more info..</a></div>
     <div>
       <form class="delete-form" action="/creatures/{{creature.id}}/delete" method="POST">
         <button class="remove_creature">Remove Creature</button>
@@ -26,5 +33,6 @@
 
 {% endblock %}
   
+
        
      

@@ -9,25 +9,25 @@ creature_repo.delete_all()
 habitat_repo.delete_all()
 
 # adding all habitats to the table
-habitat_1 = Habitat('Forest')
+habitat_1 = Habitat('Forest',"https://api.time.com/wp-content/uploads/2018/05/forest-bathing.jpg")
 habitat_repo.save(habitat_1)
 
-habitat_2 = Habitat('Volcano')
+habitat_2 = Habitat('Volcano', "https://cdn.britannica.com/34/231234-050-5B2280BB/volcanic-eruption-Antigua-Guatemala-volcano.jpg")
 habitat_repo.save(habitat_2)
 
-habitat_3 = Habitat('Ocean')
+habitat_3 = Habitat('Ocean', "https://images.theconversation.com/files/223729/original/file-20180619-126566-1jxjod2.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=675.0&fit=crop")
 habitat_repo.save(habitat_3)
 
-habitat_4 = Habitat('Icy Tundra')
+habitat_4 = Habitat('Icy Tundra', "https://scx2.b-cdn.net/gfx/news/2020/2-arctic.jpg")
 habitat_repo.save(habitat_4)
 
-habitat_5 = Habitat('Mountain')
+habitat_5 = Habitat('Mountain', "https://i.natgeofe.com/n/c9107b46-78b1-4394-988d-53927646c72b/1095.jpg")
 habitat_repo.save(habitat_5)
 
-habitat_6 = Habitat('Subteranean')
+habitat_6 = Habitat('Subteranean',"https://img.freepik.com/premium-photo/raster-illustration-beautiful-underground-lake-cave-with-drinking-water-rock-type-mountains-cave-stone-sculptures-dungeon-subterranean-spooky-sight-3d-rendering-background_76964-2554.jpg?w=2000")
 habitat_repo.save(habitat_6)
 
-habitat_7 = Habitat('Jungle')
+habitat_7 = Habitat('Jungle', "https://www.telegraph.co.uk/content/dam/Travel/2018/September/El-Yunque-morning-mist-iStock-535499464.jpg")
 habitat_repo.save(habitat_7)
 
 # adding al creatures to table
@@ -76,8 +76,8 @@ creature_repo.save(creature10)
 creature12 = Creature('Griffin',habitat_5,'Mythical creature known as a half-eagle, half-lion in various cultures. In legends and folklore, the beast guards the gold of the kings, as well as other priceless possessions.',220 ,30.00 ,50.00,"https://howtodrawforkids.com/wp-content/uploads/2022/01/how-to-draw-a-griffin.jpg" )
 creature_repo.save(creature12)
 
-# creature13 = Creature('Troll',habitat_5,'trolls are huge. The adult troll has small, beady eyes, a bulbous, warty nose and sharp, yellow teeth. Most trolls have long, curly horns on their heads similar to a goat',250 ,5.00 ,12.99)
-# creature_repo.save(creature13)
+creature13 = Creature('Troll',habitat_5,'trolls are huge. The adult troll has small, beady eyes, a bulbous, warty nose and sharp, yellow teeth. Most trolls have long, curly horns on their heads similar to a goat',250 ,5.00 ,12.99, "https://t4.ftcdn.net/jpg/03/11/23/11/360_F_311231181_62FSitmUD9CFrJIrQrIrFegwzriw9vt5.jpg")
+creature_repo.save(creature13)
 
 
 # ------------------HABITAT 6---------------------------- 
@@ -89,10 +89,10 @@ creature_repo.save(creature18)
 
 
 # ------------------HABITAT 7----------------------------
-# creature15 = Creature('Goblin',habitat_7,'A wandering sprite that is usually mischievous but often malicious',420 ,6.00 ,9.99)
-# creature_repo.save(creature15)
+creature15 = Creature('Goblin',habitat_7,'A wandering sprite that is usually mischievous but often malicious',420 ,6.00 ,9.99, "https://static.vecteezy.com/system/resources/previews/004/497/587/original/funny-cartoon-goblin-or-troll-face-with-different-expressions-character-vector.jpg")
+creature_repo.save(creature15)
 
-creature16 = Creature('Fairy',habitat_7,'A magical creature with a tiny human body and wings',312 ,7.00 ,13.99, "https://cdn1.vectorstock.com/i/1000x1000/11/65/fairies-cartoon-character-vector-12371165.jpg")
+creature16 = Creature('Fairy',habitat_7,'A magical creature with a tiny human body and wings',312 ,7.00 ,13.99, "https://thumbs.dreamstime.com/b/cartoon-fairy-girl-flying-spreading-magical-dust-brown-haired-pixie-cute-pink-dress-fairytale-character-little-wings-108647922.jpg")
 creature_repo.save(creature16)
 
 

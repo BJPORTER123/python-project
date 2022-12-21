@@ -1,13 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
 <header><h2>Edit a Creature</h2></header>
-<hr>
+<section>
 <form action="/creatures/{{creature.id}}/update" method="post">
   <div>
     <label for="name"><Title></Title>Name of Creature:</label>
     <input type="text" id="name" name="name" value="{{creature.name}}" required autofocus>
   </div>
-    <div>
     <label for="habitat">Habitat:</label>
         <select id="habitat" name="habitat_id">
             {% for habitat in habitats %}
@@ -17,7 +16,6 @@
             </option>
             {% endfor %}
         </select>
-    </div>
   <div>
     <label for="description">Description:</label>
     <input type="text" id="description" name="description" value={{creature.description}} required>
@@ -34,8 +32,12 @@
     <label for="selling_price">Selling price:</label>
     <input type="number" name="selling_price" step="0.01" id="selling_price" value={{creature.selling_price}} required>
   </div>
+  <div>
+    <label for="image">Image URL:</label>
+    <input type="text" name="image" id="image" value={{creature.image}}>
+  </div>
   <button type="submit">Edit Creature</button>
-
+</section>
 </form>
 
 {% endblock %}

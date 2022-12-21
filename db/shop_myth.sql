@@ -3,7 +3,8 @@ DROP TABLE habitats;
 
 CREATE TABLE habitats(
     id SERIAL PRIMARY KEY,
-    name VARCHAR(255)
+    name VARCHAR(255),
+    image VARCHAR(255)
 );
 
 CREATE TABLE creatures(

@@ -1,12 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
     <div class="content">
-        <h3 class="index-title">{{creature.name}}</h3>
-        <h4 class="atrributes"> Habitat Type: {{creature.habitat.name}}</h4> <br> 
-        <h4 class="atrributes">Description: {{creature.description}}</h4> <br> 
-        <h4 class="atrributes">Quantity: {{creature.quantity}}</h4> <br>
-        <h4 class="atrributes">Selling Price: {{creature.selling_price}}</h4> <br>
-        <h4 class="atrributes">Buying Cost: {{creature.buying_cost}}</h4> <br>
+        <h3 class="index-title"><a class="links" href="/creatures/{{creature.id}}">{{creature.name}}</a></h3>
+    <img src="{{creature.image}}" width="200px" height="200px">
+    <div class="content">
+  <p>
+    <b class="atrributes"> Habitat Type:</b> {{creature.habitat.name}} <br> 
+    <b class="atrributes"> Description:</b> {{creature.description}} <br> 
+    <b class="atrributes"> Quantity:</b> {{creature.quantity}} <br>
+    <b class="atrributes"> Selling Price:</b>  £ {{creature.selling_price}} <br>
+    <b class="atrributes"> Buying Cost: </b>  £ {{creature.buying_cost}} <br>
         <p><a href="/creatures/{{creature.id}}/edit">Edit</a></p>
     </div>
 {% endblock %}

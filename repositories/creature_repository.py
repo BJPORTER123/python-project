@@ -44,5 +44,5 @@ def save(creature):
 
 def update(creature):
     sql = "UPDATE creatures SET (name, habitat_id, description, quantity, buying_cost, selling_price, image) = (%s, %s, %s, %s, %s,%s, %s) WHERE id = %s"
-    values = [creature.name, creature.habitat.id, creature.description, creature.quantity, creature.buying_cost, creature.selling_price, creature.id]
+    values = [creature.name, creature.habitat.id, creature.description, creature.quantity, creature.buying_cost, creature.selling_price, creature.image, creature.id]
     run_sql(sql, values)
