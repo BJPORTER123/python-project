@@ -1,16 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
-
-<header class= "index-header"><h1>List of Habitats</h1></header>
+<header class= "index-header"><h1>List of Habitats</h1>
 <nav>
     <button class="add-button"><a class="text-button"  href="/habitats/new">Add New Habitat</a></button>
 </nav>
+</header>
 {% for habitat in habitats %}
-<div class="content">
-  <header><h3 class="index-title">{{habitat.name}}</h3></header>
-  <div class="class-images">
-    <img src="{{habitat.image}}" width="400px" height="400px">
-  </div>
+<div class="container">
+  <header><h3 class="title">{{habitat.name}}</h3></header>
+
+    <img class="class-images" src="{{habitat.image}}" width="300px" height="300px">
   <div>
       <a class="links" href="/habitats/{{habitat.id}}">Click for more info..</a>
   </div>

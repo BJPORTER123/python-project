@@ -1,16 +1,19 @@
 {% extends "base.html" %}
 {% block content %}
-    <div class="content">
-        <h3 class= "index-header"><a class="links" href="/creatures/{{creature.id}}">{{creature.name}}</a></h3>
-    <div class="class-images"><img src="{{creature.image}}" width="200px" height="200px"></div>
-    <div class="content">
-  <p>
+
+<h3 class= "index-header">{{creature.name}}</h3>
+<section class="container">
+<img class="class-images" src="{{creature.image}}" width="200px" height="200px">
+<div class="content-show">
+<p>
     <b class="atrributes"> Habitat Type:</b> {{creature.habitat.name}} <br> 
     <b class="atrributes"> Description:</b> {{creature.description}} <br> 
     <b class="atrributes"> Quantity:</b> {{creature.quantity}} <br>
     <b class="atrributes"> Selling Price:</b>  £ {{creature.selling_price}} <br>
     <b class="atrributes"> Buying Cost: </b>  £ {{creature.buying_cost}} <br>
-        <p><a href="/creatures/{{creature.id}}/edit">Edit</a></p>
-    </div>
+</p>
+<p><a class="links" href="/creatures/{{creature.id}}/edit">Edit</a></p>
+</div>
+</section>
 {% endblock %}
 

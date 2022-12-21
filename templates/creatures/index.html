@@ -1,35 +1,39 @@
 {% extends "base.html" %}
 {% block content %}
-
-<header class="index-header"><h1>List of Creatures</h1></header>
-<nav>
-  <button class="add-button"><a class="text-button" href="/creatures/new">Add New Creature</a></button>
-</nav>
+<header class="index-header">
+  <h1>List of Creatures</h1>
+  <nav>
+    <button class="add-button"><a class="text-button" href="/creatures/new">Add New Creature</a></button>
+  </nav>
+</header>
 {% for creature in creatures %}  
-
-<h3 class= "index-title">{{creature.name}}</h3>
-<div class="class-images"><img src="{{creature.image}}" width="200px" height="200px"></div>
-<div class="content">
-  <p>
-    <b class="atrributes"> Habitat Type:</b> {{creature.habitat.name}} <br> 
-    <b class="atrributes"> Description:</b> {{creature.description}} <br> 
-    <b class="atrributes"> Quantity:</b> {{creature.quantity}} <br>
-    <b class="atrributes"> Selling Price:</b>  £ {{creature.selling_price}} <br>
-    <b class="atrributes"> Buying Cost: </b>  £ {{creature.buying_cost}} <br>
-  </p> 
-      {% if creature.quantity<15 and creature.quantity>0 %}
-    <b><p> Warning {{creature.name}} is low on stock. </p></b>
-    {% elif creature.quantity == 0 %}
-    <b><p>Warning {{creature.name}} is out of stock, refill the stock.</p></b>
-      {% endif %}
-    <div><a class="links" href="/creatures/{{creature.id}}">Click for more info..</a></div>
-    <div>
-      <form class="delete-form" action="/creatures/{{creature.id}}/delete" method="POST">
-        <button class="remove_button">Remove Creature</button>
-      </form>
+  <div class="container">
+    <header>
+      <h3 class= "title">{{creature.name}}</h3>
+      <img class="class-images" src="{{creature.image}}" width="200px" height="200px">
+    </header>
+      <p class="content">
+        <b class="atrributes"> Habitat Type:</b> {{creature.habitat.name}} <br> 
+        <b class="atrributes"> Description:</b> {{creature.description}} <br> 
+        <b class="atrributes"> Quantity:</b> {{creature.quantity}} <br>
+        <b class="atrributes"> Selling Price:</b>  £ {{creature.selling_price}} <br>
+        <b class="atrributes"> Buying Cost: </b>  £ {{creature.buying_cost}} <br>
+      </p> 
+        {% if creature.quantity<15 and creature.quantity>0 %}
+        <b><p> Warning {{creature.name}} is low on stock. </p></b>
+        {% elif creature.quantity == 0 %}
+        <b><p>Warning {{creature.name}} is out of stock, refill the stock.</p></b>
+        {% endif %}
+        <div>
+          <a class="links" href="/creatures/{{creature.id}}">Click for more info..</a>
+        </div>
+        <form class="delete-form" action="/creatures/{{creature.id}}/delete" method="POST">
+            <button class="remove_button">Remove Creature</button>
+        </form>
   </div>
-</div>
-{% endfor %}
+  {% endfor %}
+
+
 
 {% endblock %}
   

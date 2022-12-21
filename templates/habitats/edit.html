@@ -1,18 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
 <header><h2 class= "index-header">Edit a Habitat</h2></header>
-<section>
+<section class="container">
 <form action="/habitats/{{habitat.id}}/update" method="post">
   <div>
-    <label for="name"><Title></Title>Name of Habitat:</label>
+    <label for="name">Name of Habitat:</label>
     <input type="text" id="name" name="name" value="{{habitat.name}}" required autofocus>
   </div>
   <div>
     <label for="image">Image URL:</label>
     <input type="text" name="image" id="image" value={{habitat.image}}>
   </div>
-    
   <button type="submit">Edit Habitat</button>
 </form>
 </section>
 {% endblock %}
+    

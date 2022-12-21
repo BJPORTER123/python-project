@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
+<div class="container">
 <header><h2 class= "index-header">Add a New Habitat</h2></header>
-<hr>
 <form action="/habitats" method="post">
   <div>
     <label for="name">Name of Habitat:</label>
@@ -12,8 +12,8 @@
     <input type="text" id="image" name="image">
   </div>
   <button type="submit">Add New Habitat</button>
-
 </form>
-
+</div>
 {% endblock %}
+
   
