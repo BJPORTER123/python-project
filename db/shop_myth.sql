@@ -15,7 +15,7 @@ CREATE TABLE creatures(
     buying_cost FLOAT,
     selling_price FLOAT,
     image VARCHAR (255),
-    habitat_id INT NOT NULL REFERENCES habitats(id)
+    habitat_id INT NOT NULL REFERENCES habitats(id) ON DELETE CASCADE
 );
 
 

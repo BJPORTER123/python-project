@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
     <div class="content">
-        <h3 class="index-title"><a class="links" href="/creatures/{{creature.id}}">{{creature.name}}</a></h3>
-    <img src="{{creature.image}}" width="200px" height="200px">
+        <h3 class= "index-header"><a class="links" href="/creatures/{{creature.id}}">{{creature.name}}</a></h3>
+    <div class="class-images"><img src="{{creature.image}}" width="200px" height="200px"></div>
     <div class="content">
   <p>
     <b class="atrributes"> Habitat Type:</b> {{creature.habitat.name}} <br> 

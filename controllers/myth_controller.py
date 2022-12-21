@@ -88,7 +88,9 @@ def show_habitat(id):
 # 3 delete a habitat
 @habitats_blueprint.route("/habitats/<id>/delete", methods = ['POST'])
 def destroy_habitat(id):
+    print("djvbcudvckudcvludcvlwued")
     habitat_repo.delete(id)
+    print("delete")
     return redirect("/habitats")
 
 # 4 new habitat template

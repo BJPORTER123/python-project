@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
-<header><h1>Habitat</h1></header>
+<header><h1 class= "index-header">Habitat</h1></header>
     <div class="content">
       <h3 class="index-title"><a class="links" href="/habitats/{{habitat.id}}">{{habitat.name}}</a></h3>
-      <img src="{{habitat.image}}" width="400px" height="400px">
+      <div class="class-images"><img src="{{habitat.image}}" width="400px" height="400px"></div>
       <p><a href="/habitats/{{habitat.id}}/edit">Edit Habitat</a></p>
     </div>
 {% endblock %}   
