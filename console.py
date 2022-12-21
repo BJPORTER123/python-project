@@ -32,67 +32,67 @@ habitat_repo.save(habitat_7)
 
 # adding al creatures to table
 # ------------------HABITAT 1----------------------------
-creature1 = Creature('Dwarf',habitat_1,'A member of a mythical race of short, stocky humanlike creatures who are generally skilled in mining and metalworking',22 ,25.00 ,39.99)
+creature1 = Creature('Dwarf',habitat_1,'A member of a mythical race of short, stocky humanlike creatures who are generally skilled in mining and metalworking',22 ,25.00 ,39.99, "https://i.pinimg.com/originals/53/1e/a8/531ea878c1d8e778feaba178f2616f1e.png")
 creature_repo.save(creature1)
 
-creature2 = Creature('Forest Nymph',habitat_1,'A nature spirit who lives in trees and takes the form of a beautiful young woman',123,30.00 ,40.99)
-creature_repo.save(creature2)
+# creature2 = Creature('Forest Nymph',habitat_1,'A nature spirit who lives in trees and takes the form of a beautiful young woman',123,30.00 ,40.99)
+# creature_repo.save(creature2)
 
-creature3 = Creature('Unicorn',habitat_1,'A mythical creature resembling a horse, with a single horn in the center of its forehead',5 ,100.00 ,140.00)
+creature3 = Creature('Unicorn',habitat_1,'A mythical creature resembling a horse, with a single horn in the center of its forehead',5 ,100.00 ,140.00, "https://img.freepik.com/premium-vector/cute-unicorn-standing-icon-illustration-unicorn-mascot-cartoon-character-animal-icon-concept-white-isolated_138676-831.jpg?w=2000")
 creature_repo.save(creature3)
 
 
 # ------------------HABITAT 2----------------------------
-creature4 = Creature('Cheruf',habitat_2,'An evil humanoid creature made of rock crystals and magma',2 ,300.00 ,350.00)
-creature_repo.save(creature4)
+# creature4 = Creature('Cheruf',habitat_2,'An evil humanoid creature made of rock crystals and magma',2 ,300.00 ,350.00)
+# creature_repo.save(creature4)
 
-creature5 = Creature('Dragon',habitat_2,'A huge, bat-winged, fire-breathing, scaly lizard or snake with a barbed tail',3 ,229.00 ,299.99)
+creature5 = Creature('Dragon',habitat_2,'A huge, bat-winged, fire-breathing, scaly lizard or snake with a barbed tail',3 ,229.00 ,299.99, "https://easydrawingguides.com/wp-content/uploads/2022/01/easy-cartoon-dragon-step-by-step-drawing-tutorial-step-10.png")
 creature_repo.save(creature5)
 
-creature6 = Creature('Hydra',habitat_2,'A ferocious snake-like monster with multiple heads, one of which was immortal and the rest of which will spawn multiple new heads if destroyed.',1 ,1000.00 ,1200.00)
-creature_repo.save(creature6)
+# creature6 = Creature('Hydra',habitat_2,'A ferocious snake-like monster with multiple heads, one of which was immortal and the rest of which will spawn multiple new heads if destroyed.',1 ,1000.00 ,1200.00)
+# creature_repo.save(creature6)
 
 
 # ------------------HABITAT 3----------------------------
-creature7 = Creature('Kraken',habitat_3,'A gigantic tentacled sea monster of Scandinavian myth',2 ,1100.00 ,1220.00)
+creature7 = Creature('Kraken',habitat_3,'A gigantic tentacled sea monster of Scandinavian myth',2 ,1100.00 ,1220.00, "https://img.freepik.com/free-vector/cute-angry-octopus-cartoon-vector-icon-illustration-animal-nature-icon-concept-isolated-premium-vector-flat-cartoon-style_138676-3635.jpg?w=2000")
 creature_repo.save(creature7)
 
-creature8 = Creature('Siren',habitat_3,'A creature half bird and half woman who lures sailors to theri death',125 ,24.00 ,32.99)
-creature_repo.save(creature8)
+# creature8 = Creature('Siren',habitat_3,'A creature half bird and half woman who lures sailors to theri death',125 ,24.00 ,32.99)
+# creature_repo.save(creature8)
 
-creature9 = Creature('Leviathan',habitat_3,'An enormous multi-headed sea serpent',1 ,4000.00 ,4500.00)
-creature_repo.save(creature9)
+# creature9 = Creature('Leviathan',habitat_3,'An enormous multi-headed sea serpent',1 ,4000.00 ,4500.00)
+# creature_repo.save(creature9)
 
 
 # ------------------HABITAT 4----------------------------
-creature10 = Creature('Yeti',habitat_4,'Has white shaggy fur and a lean muscular body like an ape',24,15.00 ,28.50)
+creature10 = Creature('Yeti',habitat_4,'Has white shaggy fur and a lean muscular body like an ape',24,15.00 ,28.50, "https://static.vecteezy.com/system/resources/previews/003/777/947/original/yeti-cartoon-illustrations-free-vector.jpg")
 creature_repo.save(creature10)
 
-creature11 = Creature('Giant',habitat_4,'Enormous size and strength packed in a human form. Their main source of food is humans', 50, 28.00 ,42.99)
-creature_repo.save(creature11)
+# creature11 = Creature('Giant',habitat_4,'Enormous size and strength packed in a human form. Their main source of food is humans', 50, 28.00 ,42.99)
+# creature_repo.save(creature11)
 
 
 # ------------------HABITAT 5----------------------------
-creature12 = Creature('Griffin',habitat_5,'Mythical creature known as a half-eagle, half-lion in various cultures. In legends and folklore, the beast guards the gold of the kings, as well as other priceless possessions.',220 ,30.00 ,50.00)
+creature12 = Creature('Griffin',habitat_5,'Mythical creature known as a half-eagle, half-lion in various cultures. In legends and folklore, the beast guards the gold of the kings, as well as other priceless possessions.',220 ,30.00 ,50.00,"https://howtodrawforkids.com/wp-content/uploads/2022/01/how-to-draw-a-griffin.jpg" )
 creature_repo.save(creature12)
 
-creature13 = Creature('Troll',habitat_5,'trolls are huge. The adult troll has small, beady eyes, a bulbous, warty nose and sharp, yellow teeth. Most trolls have long, curly horns on their heads similar to a goat',250 ,5.00 ,12.99)
-creature_repo.save(creature13)
+# creature13 = Creature('Troll',habitat_5,'trolls are huge. The adult troll has small, beady eyes, a bulbous, warty nose and sharp, yellow teeth. Most trolls have long, curly horns on their heads similar to a goat',250 ,5.00 ,12.99)
+# creature_repo.save(creature13)
 
 
 # ------------------HABITAT 6---------------------------- 
-creature17 = Creature('Golem',habitat_6,'A creature formed out of a lifeless substance such as dust or earth that is brought to life by ritual incantations and sequences of Hebrew letters',300 ,10.00 ,20.00)
-creature_repo.save(creature17)
+# creature17 = Creature('Golem',habitat_6,'A creature formed out of a lifeless substance such as dust or earth that is brought to life by ritual incantations and sequences of Hebrew letters',300 ,10.00 ,20.00)
+# creature_repo.save(creature17)
 
-creature18 = Creature('Minotaur',habitat_6,'monster of Crete that had the body of a man and the head of a bull',28,43.00 ,55.50)
+creature18 = Creature('Minotaur',habitat_6,'monster of Crete that had the body of a man and the head of a bull',28,43.00 ,55.50, "https://thumbs.dreamstime.com/b/minotaur-eps-illustration-design-47882875.jpg")
 creature_repo.save(creature18)
 
 
 # ------------------HABITAT 7----------------------------
-creature15 = Creature('Goblin',habitat_7,'A wandering sprite that is usually mischievous but often malicious',420 ,6.00 ,9.99)
-creature_repo.save(creature15)
+# creature15 = Creature('Goblin',habitat_7,'A wandering sprite that is usually mischievous but often malicious',420 ,6.00 ,9.99)
+# creature_repo.save(creature15)
 
-creature16 = Creature('Fairy',habitat_7,'A magical creature with a tiny human body and wings',312 ,7.00 ,13.99)
+creature16 = Creature('Fairy',habitat_7,'A magical creature with a tiny human body and wings',312 ,7.00 ,13.99, "https://cdn1.vectorstock.com/i/1000x1000/11/65/fairies-cartoon-character-vector-12371165.jpg")
 creature_repo.save(creature16)
 
 

@@ -1,21 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
 
-<header><h1>List of Habitats</h1></header>
-<hr>
+<header class="index-header"><h1>List of Habitats</h1></header>
 <nav>
-    <button><a href="/habitats/new">Add New Habitat</a></button>
+    <button class="add-button"><a class="text-button"  href="/habitats/new">Add New Habitat</a></button>
 </nav>
-<hr>
 {% for habitat in habitats %}
-    <div class="content1">
-      <div>
-      <p><b><a href="/habitats/{{habitat.id}}">{{habitat.name}}</a><b><br></p>
+    <div class="content">
+        <h3 class="index-title"><a class="links" href="/habitats/{{habitat.id}}">{{habitat.name}}</a></h3>
       <form class="delete-form" action="/habitats/{{habitat.id}}/delete" method="POST">
        <button class="remove_creature">Remove Habitat</button>
      </form>
-     </div>
-   </div>
+    </div>
 {% endfor %}
 {% endblock %}
      

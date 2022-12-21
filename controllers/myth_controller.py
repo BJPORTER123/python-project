@@ -31,7 +31,7 @@ def destroy(id):
 @creatures_blueprint.route("/creatures/new", methods = ['GET'])
 def new_creature():
     habitats = habitat_repo.select_all()
-    return render_template("creatures/new.html", habitats = habitats)
+    return render_template("/creatures/new.html", habitats = habitats)
 
 # 5 create a new creature
 @creatures_blueprint.route("/creatures", methods = ['POST'])
@@ -42,7 +42,9 @@ def create_creature():
     quantity = request.form['quantity']
     buying_cost = request.form['buying_cost']
     selling_price = request.form['selling_price']
-    creature = Creature(name, habitat, description, quantity, buying_cost, selling_price)
+    image = request.form['image']
+
+    creature = Creature(name, habitat, description, quantity, buying_cost, selling_price, image)
     creature_repo.save(creature)
     return redirect("/creatures")
 
@@ -51,7 +53,7 @@ def create_creature():
 def edit_creature(id):
     habitats = habitat_repo.select_all()
     creature = creature_repo.select(id)
-    return render_template("creatures/edit.html",habitats = habitats, creature = creature)
+    return render_template("/creatures/edit.html",habitats = habitats, creature = creature)
 
 # 7 update a creature
 @creatures_blueprint.route("/creatures/<id>/update", methods = ['POST'])
@@ -62,7 +64,9 @@ def update_creature(id):
     buying_cost = request.form ['buying_cost']
     selling_price = request.form ['selling_price']
     habitat = habitat_repo.select(request.form['habitat_id'])
-    creature = Creature(name, habitat, description, quantity, buying_cost, selling_price, id)
+    image = request.form['image']
+        
+    creature = Creature(name, habitat, description, quantity, buying_cost, selling_price, image, id)
     creature_repo.update(creature)
     return redirect("/creatures")
 
@@ -102,7 +106,7 @@ def create_habitat():
 @habitats_blueprint.route("/habitats/<id>/edit", methods = ['GET'])
 def edit_habitat(id):
     habitat = habitat_repo.select(id)
-    return render_template("habitats/edit.html",habitat = habitat)
+    return render_template("/habitats/edit.html",habitat = habitat)
 
 # 7 update habitat
 @habitats_blueprint.route("/habitats/<id>/update", methods = ['POST'])

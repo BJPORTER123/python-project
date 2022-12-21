@@ -1,27 +1,25 @@
 {% extends "base.html" %}
 {% block content %}
 
-<header><h1>List of Creatures</h1></header>
-<hr>
-<div>
-  <button><nav><a href="/creatures/new">Add New Creature</a></nav></button>
-</div>
-<hr>
+<header class="index-header"><h1>List of Creatures</h1></header>
+<nav>
+  <button class="add-button"><a class="text-button" href="/creatures/new">Add New Creature</a></button>
+</nav>
 {% for creature in creatures %}
+<img src="{{creature.image}}" width="200px" height="200px">
 <div class="content">
-  <div>
-  <h3><a href="/creatures/{{creature.id}}">{{creature.name}}</a></h3>
-  <p><b>Habitat Type:</b>  {{creature.habitat.name}} <br> 
-    <b>Description: </b>{{creature.description}} <br> 
-    <b>Quantity:</b>{{creature.quantity}} <br>
-    <b>Selling Price:</b>{{creature.selling_price}} <br>
-    <b>Buying Cost:</b>{{creature.buying_cost}} <br>
-    <b>Selling Price:</b> {{creature.selling_price}} <br></p>
+  <h3 class="index-title"><a class="links" href="/creatures/{{creature.id}}">{{creature.name}}</a></h3>
+  <p>
+    <b class="atrributes"> Habitat Type:</b> {{creature.habitat.name}} <br> 
+    <b class="atrributes"> Description:</b> {{creature.description}} <br> 
+    <b class="atrributes"> Quantity:</b> {{creature.quantity}} <br>
+    <b class="atrributes"> Selling Price:</b>  £ {{creature.selling_price}} <br>
+    <b class="atrributes"> Buying Cost: </b>  £ {{creature.buying_cost}} <br>
+  </p> 
     <div>
       <form class="delete-form" action="/creatures/{{creature.id}}/delete" method="POST">
         <button class="remove_creature">Remove Creature</button>
       </form>
-    </div>
   </div>
 </div>
 {% endfor %}

@@ -10,10 +10,11 @@ CREATE TABLE creatures(
     id SERIAL PRIMARY KEY,
     name VARCHAR(255),
     description TEXT,
-    habitat_id INT NOT NULL REFERENCES habitats(id),
     quantity INT,
     buying_cost FLOAT,
-    selling_price FLOAT
+    selling_price FLOAT,
+    image VARCHAR (255),
+    habitat_id INT NOT NULL REFERENCES habitats(id)
 );
 
 

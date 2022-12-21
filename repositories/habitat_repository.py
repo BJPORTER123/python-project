@@ -40,6 +40,6 @@ def save(habitat):
     return habitat
 
 def update(habitat):
-    sql = "UPDATE habitats SET (name) = (%s) WHERE id = %s"
+    sql = "UPDATE habitats SET name = (%s) WHERE id = %s"
     values = [habitat.name, habitat.id]
     run_sql(sql,values)
