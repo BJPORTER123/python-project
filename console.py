@@ -92,7 +92,7 @@ creature_repo.save(creature18)
 creature15 = Creature('Goblin',habitat_7,'A wandering sprite that is usually mischievous but often malicious',420 ,6.00 ,9.99, "https://static.vecteezy.com/system/resources/previews/004/497/587/original/funny-cartoon-goblin-or-troll-face-with-different-expressions-character-vector.jpg")
 creature_repo.save(creature15)
 
-creature16 = Creature('Fairy',habitat_7,'A magical creature with a tiny human body and wings',312 ,7.00 ,13.99, "https://thumbs.dreamstime.com/b/cartoon-fairy-girl-flying-spreading-magical-dust-brown-haired-pixie-cute-pink-dress-fairytale-character-little-wings-108647922.jpg")
+creature16 = Creature('Dan',habitat_7,'A magical creature with a tiny human body and wings',312 ,7.00 ,13.99, "https://thumbs.dreamstime.com/b/cartoon-fairy-girl-flying-spreading-magical-dust-brown-haired-pixie-cute-pink-dress-fairytale-character-little-wings-108647922.jpg")
 creature_repo.save(creature16)
 
 
